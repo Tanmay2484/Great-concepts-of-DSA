@@ -1,0 +1,24 @@
+    Well, what if we can find the first occurance of every element and the first occurance of its next greater element in the Sorted array. Then, (second-first) will be
+    our frequency of the element.Right?
+
+	Ex-> arr=[12, 33, 4, 56, 22, 2, 34, 33, 22, 12, 34, 56]
+    Query=[0, 11, 33] -> find occurance of 33 in subarray from 0 to 11
+  
+  Approach->
+Example : 
+      Sorted array=[2, 4, 12, 12, 22, 22, 33, 33, 34, 34, 56, 56]
+          occurance of 33 : index 6
+          occurance of 34(the next greater element of 33) : index 8
+          so, freq of 33 is (8-6) = 2
+
+
+How to Code this logic?
+We will use lower_bound and upper_bound for this. lowerbound basically finds the first index of an element (here 33 in above example) in sorted array
+and upperbound finds the first index of element> that element(Here, 34 in above example).
+
+Code of lower bound and upper bound
+
+int first = lower_bound(mp[value].begin(),mp[value].end(),left)- mp[value].begin();
+int second = upper_bound(mp[value].begin(),mp[value].end(),right)- mp[value].begin();
+
+frequency of any element in a particuler element = second-first; 
