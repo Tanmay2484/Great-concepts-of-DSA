@@ -1,0 +1,21 @@
+/*INSERTION SORT */
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={2,5,1,8,0};
+   int n=sizeof(arr)/sizeof(arr[0]);
+   // we are starting from one because we are storing the first value as sorted in the value variable
+   for(int i=1;i<n;i++){
+       //atfirst we will store the value in val and then store the index
+       int val=arr[i],index=i;
+       //then we will check that the prevous element is greater than or not if greater than that we will swap
+        while(index>0 && arr[index-1]>val){
+            arr[index]=arr[index-1];
+            index--;
+        }
+        arr[index]=val;
+   }
+   for(auto i:arr){
+       cout<<i<<" ";
+   }
+}
