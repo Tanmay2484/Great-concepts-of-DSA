@@ -1,0 +1,20 @@
+/* N th fibonacci number Top Down approach
+*/
+#include <iostream>
+using namespace std;
+int fibo[1000];
+int fibonacciTopDown(int N, int fibo[]){
+    if(N == 1 || N == 0){
+        return N;
+    }
+    if(fibo[N] != 0){
+        return fibo[N];
+    }
+    int ans = fibonacciTopDown(N-1, fibo) + fibonacciTopDown(N - 2, fibo);
+    fibo[N] = ans;
+    return ans;
+}
+int main() {
+    cout<<fibonacciTopDown(8,fibo);
+    
+}
