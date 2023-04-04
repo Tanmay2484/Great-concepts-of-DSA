@@ -1,4 +1,4 @@
-/* Nth fibonacci number
+/* Nth fibonacci number Bottom Up Approach
 */
 #include <iostream>
 using namespace std;
