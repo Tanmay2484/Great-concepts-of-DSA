@@ -1,0 +1,27 @@
+/* Creating a linkedlist
+*/
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    struct node{
+        int data;
+        struct node *next;
+    };
+    struct node *head,*middle,*last,*current;
+    head=(struct node*)malloc(sizeof(struct node));
+    middle=(struct node*)malloc(sizeof(struct node));
+    last=(struct node*)malloc(sizeof(struct node));
+
+    head->data=10;
+    middle->data=15;
+    last->data=20;
+
+    head->next=middle;
+    middle->next=last;
+    last->next=NULL;
+    current=head;
+    while(current!=NULL){
+        cout<<current->data<<" ";
+        current=current->next;
+    }
+}
