@@ -1,0 +1,27 @@
+/* Add First node in a linklist
+
+*/
+#include<bits/stdc++.h>
+using namespace std;
+struct node{
+        int data;
+        struct node *next;
+    };
+struct node* head=NULL;
+void addfirst(int val){
+    struct node *newnode=(struct node*)malloc(sizeof(struct node));
+    newnode->data=val;
+    newnode->next=head;
+
+    head=newnode;
+}
+int main() {
+    addfirst(10);
+    addfirst(15);
+    addfirst(20);
+    struct node* current=head;
+    while(current!=NULL){
+        cout<<current->data<<" ";
+        current=current->next;
+    }
+}
