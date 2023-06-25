@@ -1,0 +1,27 @@
+//reverse a number 
+//c++
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n,rev=0;
+    cin>>n;
+    while(n!=0){
+        rev=rev*10+n%10;
+        n/=10;
+    }
+    cout<<rev;
+}
+//java
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        int n,rev=0;
+        Scanner sc=new Scanner(System.in);
+         n=sc.nextInt();
+         while(n!=0){
+             rev=rev*10+n%10;
+             n/=10;
+         }
+         System.out.println("reverse number is "+rev);
+    }
+}
